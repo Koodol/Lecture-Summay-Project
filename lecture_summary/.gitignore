@@ -1,9 +1,0 @@
-node_modules/
-frontend/build/
-.venv/
-.env
-*.env
-__pycache__/
-*.log
-*.tmp
-lecture-ai-key.json
