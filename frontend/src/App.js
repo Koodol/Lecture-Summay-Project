@@ -26,13 +26,12 @@ function App() {
 export default App;
 */
 
-import UploadSection from "./components/UploadSection";
-
 export default function App() {
   return (
-    <div style={{ padding: 24 }}>
-      <h1>Lecture Summary Project</h1>
-      <UploadSection />
+    <div className="min-h-screen flex items-center justify-center text-slate-700">
+      <p>
+        Loading demo... If not redirected, open <a className="text-blue-600 underline" href="/ai-notes-demo.html">/ai-notes-demo.html</a>
+      </p>
     </div>
   );
 }

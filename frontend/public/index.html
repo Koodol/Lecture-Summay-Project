@@ -24,7 +24,35 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Lecture Summary</title>
+    <!-- Tailwind CSS CDN (dev preview). Remove after PostCSS pipeline is stable. -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: { extend: {} },
+      };
+    </script>
+    <!-- Demo fonts/icons for consistent look with ai-notes-demo.html -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <style>
+      body { font-family: 'Lexend','Noto Sans KR',system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif; }
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; font-size: 24px; }
+    </style>
+    <!-- Redirect root to the demo page so it acts as the main UI -->
+    <script>
+      (function(){
+        try {
+          var path = (location.pathname || '/');
+          if (path === '/' || /\/index\.html?$/.test(path)) {
+            location.replace('ai-notes-demo.html');
+          }
+        } catch(e) { /* no-op */ }
+      })();
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
